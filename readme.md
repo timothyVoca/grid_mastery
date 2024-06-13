@@ -7,3 +7,5 @@ This is a training on understanding CSS Grid and its proper implementation. Grid
 It offers the ultimate control on webpage layout.
 
 Okay. I am creating fake information for git. We will return to the version before this.
+
+These are the changes for Version 3
