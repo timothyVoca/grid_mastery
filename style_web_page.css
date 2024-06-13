@@ -1,0 +1,63 @@
+.header {
+  grid-area: header;
+}
+
+.feature-yellow {
+  grid-area: fYellow;
+}
+
+.feature-purple {
+  grid-area: fPurple;
+}
+
+.feature-red {
+  grid-area: fRed;
+}
+
+.content {
+  grid-area: content;
+}
+
+.signup {
+  grid-area: signUp;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 250px 150px auto;
+  grid-template-areas:
+    "   header    header    header  "
+    "   fYellow   fPurple   fRed    "
+    "   signUp    signUp    signUp  "
+    "   content   content   content "
+  ;
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px auto 150px 150px;
+    grid-template-areas:
+      "   header   header    "
+      "   content  content   "
+      "   signUp   fYellow   "
+      "   fRed     fPurple   "
+    ;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto repeat(4, 100px);
+    grid-template-areas:
+      "   header    "
+      "   content   "
+      "   signUp    "
+      "   fYellow   "
+      "   fRed      "
+      "   fPurple   "
+    ;
+  }
+}
